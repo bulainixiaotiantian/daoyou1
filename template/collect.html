@@ -1,8 +1,4 @@
-<style>
-body {
-    padding-top: 1.21rem;
-}
-</style>
+
  <div class="head">
 		<div id="distance" class="distance">距离</div>
 		<span id="head_price" class='price'>价格</span>
@@ -46,19 +42,25 @@ body {
 	}
 </script>
 <script>
+		var off=true;
+		
+		
+
+
 		//aiax请求头像数据--------------------------------------------------------
 		
 			var con="";
-			 $.get("static/collect.json",null,function(data,res){
+			 $.get("static/piclist.json",null,function(data,res){
+				 	var attry=[];
 					if(res=="success"){
 						console.log("ok");
-						for(var i=1;i<data["images"].length;i++){
-							 con+="<li class='remove'><img src='imagesc/"+data["images"][i]+".jpg'></li>";
+						for(var k in data["pic"]){
+							 con+="<li class='list-unstyled'><div><img class='clear' src='images/piczoom_button_delete_default.png'></div><img src='imagesc/"+data["pic"][k].img+".jpg'><p>"+data["pic"][k].name+"<span>"+data["pic"][k].age+"</span></p></li>";
+							 attry.push('images/'+data["pic"][k].img+'.jpg');
 						}
-						console.log(i)
 						$(".main ul").append(con);
-					};
-					
-					
+						
+					};	
 			})
+			
 </script>

@@ -31,30 +31,33 @@
 		
 </ul>
 <script>
-	
-			
+
+
+	//侧边栏---------------------------------	
 	$(".head_icon").eq(0).click(function(){
-		
 		$(".aside").css({"right":"0px"});
 	})
-	$(".rever")[0].addEventListener("touchstart",rever,false)
+	$(".rever").click(function(){
+	
+		$(".aside").css({"right":"-50vw"})
+	})
+	/*$(".rever").on("click",rever)
 	
 	function rever(){
-		$(".aside").css({"right":"-50vw"});
-	}
+		alert(4)
+		//$(".asi3de").css({"right":"-50vw"});
+	}*/
 </script>
 <script>
 		//aiax请求头像数据--------------------------------------------------------
 		
 			var con="";
-			$.get("static/pic-list.json",null,function(data,res){
+			$.get("static/piclist.json",null,function(data,res){
 					if(res=="success"){
-						
 						var attry=[];
-						for(var i=1;i<data["images"].length;i++){
-						
-							 con+="<li class='list-unstyled'><img src='images/"+data["images"][i]+".jpg'></li>";
-							 attry.push('images/'+data["images"][i]+'.jpg');
+						for( var k in data["pic"]){
+							 con+="<li class='list-unstyled'><img src='images/"+data["pic"][k].img+".jpg'><p>"+data["pic"][k].name+"<span>"+data["pic"][k].age+"</span></p></li>";
+							 attry.push('images/'+data["pic"][k].img+'.jpg');
 							 
 						}
 						$(".main ul").append(con);
@@ -96,6 +99,5 @@
 </script>
 <style>
 body {
-    padding-top: 1.21rem;
 }
 </style>

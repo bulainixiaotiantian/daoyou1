@@ -1,16 +1,16 @@
  <!-- Swiper 轮播图-->
     <div class="swiper-container">
         <div class="swiper-wrapper" id="swiper-wrapper">
-            <div class="swiper-slide"><img src='images/detail1.jpg'></div>
-            <div class="swiper-slide"><img src='images/detail2.jpg'></div>
-            <div class="swiper-slide"><img src='images/detail3.jpg'></div>
-            <div class="swiper-slide"><img src='images/detail4.jpg'></div>
+            <div class="swiper-slide"><img src='images/detail1.png'></div>
+            <div class="swiper-slide"><img src='images/detail2.png'></div>
+            <div class="swiper-slide"><img src='images/detail3.png'></div>
+            <div class="swiper-slide"><img src='images/detail4.png'></div>
             
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
 		<div class="message-box">
-			<p id="name">带着微笑的王小思<br><span id="gender"><img src="images/details_icon_girl_default.png"/></span><span id="location">25 广东 广州</span></p>
+			<div id="name"><p>带着微笑的王小思</p><div class="location"><span id="gender"><img src="images/details_icon_girl_default.png"/></span><span id="location">25 广东 广州</span></div></div>
 			
 			<span id="select_like"><img src="images/piczoom_button_like_default.png"></span>
 		</div>
@@ -18,7 +18,7 @@
 	
 	<!---------------------详细信息-------------------->
 	<div class='main clearfix'>
-		<h4 id="merit">普通话,英语,德语</h4>
+		<h4 id="merit">普通话、英语、德语</h4>
 		
 		<h4 id="from_method">个人介绍</h4>
 		<p id="saying">			我是钢琴爱好者，很喜欢旅游，经朋友介绍来到这个网站，我在广州长大，熟悉广州各处玩乐名胜，希望给同样喜欢广州的你带来不一样的广州之旅，很高兴认识你们。
@@ -95,6 +95,8 @@
 	<!-- 引入 jQuery Mobile 库 -->
 
     <script>
+	
+	
 	wecat_pay()//跳转微信支付密码输入页面
 	star();//5星评价
 	banner();//sweiper轮播图
@@ -102,10 +104,25 @@
 	loadBigPic();//轮播图下拉变大
 	 collect();//收藏导游
 	 
-	 
+		$('html').css("font-size",$(window).width()/750*100+"px")
+			$(window).resize(function(){
+				$('html').css("font-size",$(window).width()/750*100+"px")
+		});
+	
+	
+	
+	
 	function collect(){
+		 var off=true;
 		$("#select_like").on("touchstart",function(){
-			$(this).children().attr("src","images/piczoom_button_like_selected.png");
+			if(off){
+				$(this).children().attr("src","images/piczoom_button_like_selected.png");	
+			}else{
+				$(this).children().attr("src","images/piczoom_button_like_default.png");	
+				
+				};
+			off=!off;
+			
 		});
 		
 	};
