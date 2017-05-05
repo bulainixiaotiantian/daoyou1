@@ -20,7 +20,7 @@ html{font-size:100px}
 .none{bottom:0;height:1.5rem;text-align:center;}
 /*--------------首页-侧边栏-----------------------*/
 .aside{ width:3.75rem;
-    position: absolute;
+    position: fixed;
     right:-50vw;
     top: 0;
     height: 100vh;
