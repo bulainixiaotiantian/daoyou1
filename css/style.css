@@ -167,6 +167,11 @@ html{font-size:100px}
 .footer{position:fixed;bottom:0;width:7.5rem; z-index: 2;}
 .footer>div{padding-top:0.13rem;color:#464068;float:left;width:2.5rem;font-size:0.2rem;text-align:center;background:#8077bd;height:0.96rem; vertical-align:middle;}
 .footer img{width:0.38rem;height:0.45rem;}
+.footer img_one{}
+.footer img_two{}
+.footer img_three{}
+
+
 .footer .text{line-height:0.34rem;}
 .footer  a{display: inline-block;}
 .footer .img2{display:none;}
