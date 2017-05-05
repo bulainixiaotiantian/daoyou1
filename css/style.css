@@ -370,15 +370,17 @@ laber{
 /*--------------------支付页面--------------------------*/
 
 #choice_type{
-	width: 90%;
+	padding-top: 0.8rem;
+	margin: 0 auto;
+    width: 6.8rem;
 	color: #fff;
 	text-align: center;
 	font-size: 0.1rem;
-	margin: 0.5rem 5% 0.3rem 5% ;
+	
 }
 .type{
 	height: 0.98rem;
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.3rem;
 	background:#464068 ;
 	line-height: 0.98rem;
 	font:0.28rem/0.98rem "微软雅黑"
@@ -390,10 +392,9 @@ laber{
 	font:0.28rem/0.98rem "微软雅黑";
 	height: 0.98rem;
 	background: #00b6be;
-	
 	border: none;
-	width: 90%;
-	margin: 0 5%;
+	width: 6.8rem;
+	margin: 0 0.35rem;
 }
 #affirm_btn a{
 	color: #fff;
