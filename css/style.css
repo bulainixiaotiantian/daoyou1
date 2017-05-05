@@ -167,14 +167,17 @@ html{font-size:100px}
 .footer{position:fixed;bottom:0;width:7.5rem; z-index: 2;}
 .footer>div{padding-top:0.13rem;color:#464068;float:left;width:2.5rem;font-size:0.2rem;text-align:center;background:#8077bd;height:0.96rem; vertical-align:middle;}
 .footer img{width:0.38rem;height:0.45rem;}
-.footer img_one{}
-.footer img_two{}
-.footer img_three{}
+
+.footer img_one{width:0.48rem;height:0.50rem;}
+.footer img_two{width:0.51rem;height:0.46rem;}
+.footer img_three{width:0.39rem;height:0.47rem;}
 
 
 .footer .text{line-height:0.34rem;}
 .footer  a{display: inline-block;}
 .footer .img2{display:none;}
+
+
 .main ul li.remove:after{
 	content:"";display:block;position:absolute;background:url(../images/piczoom_button_delete_default.png) no-repeat;
 	width:0.22rem; height:0.26rem;z-index: 0;top:0;right:0;background-size:cover;
