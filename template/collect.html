@@ -1,0 +1,64 @@
+<style>
+body {
+    padding-top: 1.21rem;
+}
+</style>
+ <div class="head">
+		<div id="distance" class="distance">距离</div>
+		<span id="head_price" class='price'>价格</span>
+		<span id="rank" class='rank'>星级</span>
+		<span class="head_icon"><img src="images/home_button_filter_default.png"></span>
+		<span id="order"  class="head_icon"><img src="images/home_button_sort_default.png"></span>
+	</div>
+<!---------------侧边筛选栏----------------->
+	<div class="aside">
+		<div class="rever"><img src="images/home_button_close_default.png"></div>
+		<h3>性别</h3>
+		<p class="clearfix">
+			<span id="unlimited">不限</span>
+			<span id="girl">女生</span>
+			<span id="boy">男生</span>
+		</p>
+		<h3>城市</h3>
+		<p>
+			<span id='your_location'>广州</span>
+			<img class="location_icon" src="images/location_03.png">
+		</p>
+		<form>
+			<input id="city" type="text" placeholder="看看其它城市"/><img class="search" src="images/home_icon_search_default.png">
+			<button class="btn btn-block" id="complete">完成</button>
+		</form>
+	</div>
+<ul class="list-unstyled">
+		<!----------此处用ajax加载------------->
+		
+</ul>
+
+	<script>	
+	$(".head_icon").eq(0).click(function(){
+		
+		$(".aside").css({"right":"0px"});
+	})
+	$(".rever")[0].addEventListener("touchstart",rever,false)
+	
+	function rever(){
+		$(".aside").css({"right":"-50vw"});
+	}
+</script>
+<script>
+		//aiax请求头像数据--------------------------------------------------------
+		
+			var con="";
+			 $.get("static/collect.json",null,function(data,res){
+					if(res=="success"){
+						console.log("ok");
+						for(var i=1;i<data["images"].length;i++){
+							 con+="<li class='remove'><img src='imagesc/"+data["images"][i]+".jpg'></li>";
+						}
+						console.log(i)
+						$(".main ul").append(con);
+					};
+					
+					
+			})
+</script>
