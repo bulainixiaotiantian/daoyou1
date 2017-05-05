@@ -4,10 +4,10 @@ body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dd,dt,input{margin:0;padding:0;}
 	input{outline:none;}
 input	
 body{font-family:"微软雅黑"}
-.head{top:0;position:fixed;width:7.5rem;    z-index: 1; height:0.98rem;background:#8077bd;font-size:0.28rem ;line-height:0.98rem;color:#fff;text-align:center;margin-bottom:0.2rem;}
+.head{top:0;position:fixed;width:7.5rem;    z-index: 1; height:45px;background:#8077bd;font-size:0.28rem ;line-height:0.98rem;color:#fff;text-align:center;margin-bottom:0.2rem;}
 /*---------main部分--------------*/
 html{font-size:100px}
-.distance{width:1.5rem;height:0.98rem;float:left;background:#fd8f00;}
+.distance{width:1.5rem;height:45px;float:left;background:#fd8f00;}
 .price,.rank{width:1.5rem;height:0.98rem;float:left;}
 .head_icon{width:0.78rem;float:right;}
 .head_icon img{height:0.4rem;}
