@@ -8,8 +8,12 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	 
   </head>
-  <body>
+	<body>
+	<div id="loading">
+		<img src="images/loading.gif"/>
+	</div>
    <div class="main">
+		
    </div>
    <div class='none'></div>
    <div class="footer">
@@ -36,23 +40,32 @@
 		</div>
 		
    </div>
-   <script src='js/jquery-3.1.0.js'></script>
+	<script src='js/jquery-3.1.0.js'></script>
 	<script src='js/swiper.min.js'></script>
 	<script src='js/index.js'></script>	 
     <script>
    
-   
+   function load(modle,url){
+		$.get(url,null,function(data){
+			$("#loading").show();
+			$(modle).html(data)
+			$("#loading").hide();
+		})	
+  
+  };
 			loadTemplate(0,"template/index.html");
 			loadTemplate(1,"template/collect.html");
 			//loadTemplate(2,"template/mine.html");
 			$(".footer div a").eq(2).click(function(){
-				
-				$(".main").load("template/mine.html");
+				//$(".main").load("template/mine.html");
+				load(".main","template/mine.html")
 			});
 				
 			function loadTemplate(num,url){
 				$(".footer div a").eq(num).click(function(){
-					$(".main").load(url);
+				
+				load(".main",url)
+					//$(".main").load(url);
 				});
 			
 			};

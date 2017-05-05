@@ -6,6 +6,8 @@
 		<span class="head_icon"><img src="images/home_button_filter_default.png"></span>
 		<span id="order"  class="head_icon"><img src="images/home_button_sort_default.png"></span>
 	</div>
+<!---------------gif加载动画----------------->
+
 <!---------------侧边筛选栏----------------->
 	<div class="aside">
 		<div class="rever"><img src="images/home_button_close_default.png"></div>
@@ -51,14 +53,17 @@
 		
 			var con="";
 			 $.get("static/piclist.json",null,function(data,res){
+			 $("#loading").show();//gif加载显示
 				 	var attry=[];
 					if(res=="success"){
+						 $("#loading").hide();
 						console.log("ok");
 						for(var k in data["pic"]){
 							 con+="<li class='list-unstyled'><div><img class='clear' src='images/piczoom_button_delete_default.png'></div><img src='imagesc/"+data["pic"][k].img+".jpg'><p>"+data["pic"][k].name+"<span>"+data["pic"][k].age+"</span></p></li>";
 							 attry.push('images/'+data["pic"][k].img+'.jpg');
 						}
 						$(".main ul").append(con);
+						
 						
 					};	
 			})

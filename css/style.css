@@ -4,7 +4,7 @@ body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dd,dt,input{margin:0;padding:0;}
 	input{outline:none;}
 	
 body{font-family:"微软雅黑"; letter-spacing: 0.03rem;}
-.head{top:0;position:fixed;width:7.5rem;    z-index: 1; height:45px;background:#8077bd;font-size:0.28rem ;line-height:45px;color:#fff;text-align:center;}
+.head{top:0;position:fixed;width:7.5rem;    z-index: 10; height:45px;background:#8077bd;font-size:0.28rem ;line-height:45px;color:#fff;text-align:center;}
 /*---------main部分--------------*/
 html{font-size:100px}
 .distance{width:1.5rem;height:45px;float:left;background:#fd8f00;}
@@ -28,7 +28,12 @@ html{font-size:100px}
     heigth: 0.26rem;
     margin-top: -2px;}
 .main li>div .clear{width:0.22rem;heigth:0.26rem;}
-
+#loading{
+	text-align: center;
+    padding: 45vw;
+	
+	
+}
 
 .none{bottom:0;height:1.5rem;text-align:center;}
 /*--------------首页-侧边栏-----------------------*/
@@ -37,7 +42,7 @@ html{font-size:100px}
     right:-50vw;
     top: 0;
     height: 100vh;
-    z-index: 3;
+    z-index: 99;
     background: #34324d;
 	transition:all 0.8s;
 	color:#fff;
