@@ -13,7 +13,7 @@ html{font-size:100px}
 .head_icon img{height:0.4rem;}
 .main{ overflow-y:scroll;}
 
-.list-unstyled{display:flex;flex-flow:row wrap; padding-top: 29px;}
+.list-unstyled{display:flex;flex-flow:row wrap; padding-top: 29px;-webkit-display:flex;}
    
 .list-unstyled li{position:relative;}   
 .list-unstyled li p{padding-left:0.11rem;width:100%;position:absolute; bottom:0;margin-bottom:-29px;height:0.4rem;background:#000;color:#fff;opacity: 0.3;font:0.19rem/0.4rem "微软雅黑";}
