@@ -81,7 +81,7 @@
 			<div class='to_pay'>
 				<p>添加需支付￥2.00</p>
 				<p id="wecat_pay">立即支付</p>
-				<p>购买套餐</p>
+				<p id="buy_type">购买套餐</p>
 			</div>
 			
 			<p class="cancel">取消</p>
@@ -126,16 +126,15 @@
 		});
 		
 	};
+	$("#buy_type").click(function(){
+		load("body","template/choice_type.html")
+	})
+	
 	function wecat_pay(){
 		$("#wecat_pay").on("touchstart",function(){
-			
 			diapear();
-			$("body").load("template/wecat_password.html");
-		
-			
+			$("body").load("template/wecat_password.html");	
 		});
-	
-	
 	};
 	
 	function diapear(){
