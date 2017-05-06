@@ -86,8 +86,7 @@
 			
 			<p class="cancel">取消</p>
 		</div>
-		
-		
+
 	</div>
 	
 	<div class="motai"></div>
@@ -102,16 +101,13 @@
 	banner();//sweiper轮播图
 	pay();//支付弹窗
 	loadBigPic();//轮播图下拉变大
-	 collect();//收藏导游
+	collect();//收藏导游
 	 
+	$('html').css("font-size",$(window).width()/750*100+"px")
+		$(window).resize(function(){
 		$('html').css("font-size",$(window).width()/750*100+"px")
-			$(window).resize(function(){
-				$('html').css("font-size",$(window).width()/750*100+"px")
-		});
-	
-	
-	
-	
+	});
+
 	function collect(){
 		 var off=true;
 		$("#select_like").on("touchstart",function(){

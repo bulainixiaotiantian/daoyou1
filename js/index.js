@@ -50,10 +50,8 @@
 							$(this).css("color","#464068").attr("index",0);
 						};
 						console.log($(this).attr("index"));
-						
-						
+
 					});
-				
 				});
 			
 			}
