@@ -1,5 +1,19 @@
 	
 		$(function(){
+			//安卓返回键------------------------------------------
+			function _reset(ev){
+				var ev=ev || event;
+				//var oEl=ev.target||ev.srcElement;
+				
+				if(ev.keyCode==4){
+					alert(3);
+				}
+				
+			}
+			
+			 _reset(ev);
+			
+			//适配尺寸调整----------------------------------------
 			$('html').css("font-size",$(window).width()/750*100+"px")
 			$(window).resize(function(){
 				$('html').css("font-size",$(window).width()/750*100+"px")
